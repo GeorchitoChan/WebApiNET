@@ -23,7 +23,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 // app.UseWelcomePage(); // Middlewares
-app.UseTimeMiddleware();
 
 app.MapControllers();
 
