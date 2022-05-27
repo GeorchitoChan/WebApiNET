@@ -31,8 +31,6 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    [Route("Get/weatherforecast")]
-    [Route("[action]")] // Allow access to the endpoint with the function name.
     public IEnumerable<WeatherForecast> Get()
     {
         _logger.LogInformation("Retornando la lista de WeatherForecast");

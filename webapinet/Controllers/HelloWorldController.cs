@@ -15,6 +15,7 @@ public class HelloWorldController : ControllerBase
         helloWorldService = helloWorld;
     }
 
+    [HttpGet]
     public IActionResult Get()
     {
         _logger.LogInformation("Obteniendo un hola mundo.");
