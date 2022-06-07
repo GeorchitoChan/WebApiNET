@@ -30,9 +30,9 @@ public class TareaService : ITareaService
         if (tareaActual != null)
         {
             tareaActual.Titulo = tarea.Titulo;
-            tarea.Descripcion = tarea.Descripcion;
-            tarea.PrioridadTarea = tarea.PrioridadTarea;
-            tarea.CategoriaId = tarea.CategoriaId;
+            tareaActual.Descripcion = tarea.Descripcion;
+            tareaActual.PrioridadTarea = tarea.PrioridadTarea;
+            tareaActual.CategoriaId = tarea.CategoriaId;
 
             await context.SaveChangesAsync();
         }
