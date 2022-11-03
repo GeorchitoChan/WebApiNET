@@ -37,6 +37,12 @@ public class WeatherForecastController : ControllerBase
         return ListWeatherForecast;
     }
 
+    [HttpGet("{dateInitial}/{dateEnd}")]
+    public IEnumerable<WeatherForecast> Get(DateTime dateInitial, DateTime dateEnd)
+    {
+        return ListWeatherForecast.FindAll(l => l.Date >= dateInitial && l.Date <= dateEnd);
+    }
+
     [HttpPost]
     public IActionResult Post(WeatherForecast weatherForecast)
     {
